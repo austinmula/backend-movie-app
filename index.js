@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/auth", require("./routes/auth.routes"));
 app.use("/api/series", require("./routes/series.routes"));
+app.use("/api/favourites", require("./routes/favourites.routes"));
+app.use("/api/subscriptions", require("./routes/subscriptions.routes"));
 
 app.get("/", function (req, res) {
   res.send("Hello World");
